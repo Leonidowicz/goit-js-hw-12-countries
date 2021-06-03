@@ -1,0 +1,138 @@
+:root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  color: rgb(127, 211, 214);
+  background-color: #545658;
+
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: color 150ms var(--timing-function),
+    background-color 150ms var(--timing-function);
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  margin-bottom: 0;
+  font-size: x-large;
+}
+h3 {
+  margin-bottom: 40px;
+}
+ul {
+  margin-top: 0;
+  padding-left: 0;
+}
+input {
+  height: 38px;
+  margin-right: 15px;
+  display: inline-block;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 15px;
+}
+li {
+  list-style: none;
+  display: flex;
+  /* align-content: flex-start; */
+  /* align-content: center; */
+  justify-content: space-between;
+  align-items: flex-start;
+}
+li p {
+  display: inline-block;
+}
+.newMarkup {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.content > ul {
+  margin-right: 50px;
+}
+.lang {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #2196f3;
+  border: 0;
+  outline: 0;
+  padding: 8px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.05);
+  font: inherit;
+  font-weight: 500;
+  user-select: none;
+  transition: background-color 250ms var(--timing-function);
+}
+
+.button:hover {
+  box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.15);
+  background-color: #1976d2;
+}
+
+.button__icon {
+  margin-right: 8px;
+}
+.card {
+  width: 288px;
+}
+
+.card-text {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.card-img-top {
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+  padding: 10px;
+}
+
+.card {
+  margin: 10px;
+}
+form {
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+form > p {
+  text-align: center;
+  display: block;
+  margin-bottom: 40px;
+}
