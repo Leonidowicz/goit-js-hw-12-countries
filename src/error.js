@@ -1,14 +1,19 @@
-export default function onFatchError(error, ref, callback) {
-  console.log('Это Кетч');
-  console.dir(error);
-  if (error.message === "Cannot read property '0' of undefined") {
-    ref.innerHTML = `<p>Такой страны не существует</p>`
-  } else {
-    Swal.fire({
-      title: 'Error!',
-      text: 'Do you want to continue',
-      icon: 'error',
-      confirmButtonText: 'Cool'
+import {
+  error
+} from '@pnotify/core';
+import '@pnotify/core/dist/BrightTheme.css';
+
+export default function onFatchError(err, ref) {
+  console.dir(err);
+  if (!err.ok) {
+    ref.innerHTML = `<p class="error">Такой страны не существует,</br>проверьте правильность ввода.</p>`;
+    error({
+      text: `Ошибка: ${err.status}`,
+      mode: 'light',
+      closer: false,
+      sticker: false,
+      hide: true,
+      delay: 50,
     })
   }
 }
