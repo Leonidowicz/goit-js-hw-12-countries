@@ -52,6 +52,7 @@
     "webpackbar": "^4.0.0"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "child_process": "^1.0.2",
     "core-js": "^3.6.5",
     "fs": "0.0.1-security",
