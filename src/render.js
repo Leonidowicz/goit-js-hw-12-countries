@@ -14,12 +14,7 @@ export default async function makeMurcup(data, ref, callback) {
     return;
   }
   if (data.length >= 11) {
-    data
-      .slice(0, 10)
-      .map(country => (markup += `<li>${country.name}</li>`))
-      .join('');
-    ref.innerHTML = ` <p>По вашему запросу найдены такие страны: </p></br><ul>${markup}</ul>
-      <p class="tnx">Внимание!</br> По вашему запросу найдено <b>больше</b> десяти стран.</br>
+    ref.innerHTML = `<p class="tnx">Внимание!</br> По вашему запросу найдено <b>больше</b> десяти стран.</br>
   Пожалуйста сделайте ваш запрос более специфическим.</p>`;
     notice({
       text: 'Пожалуйста сделайте ваш запрос более специфическим.',
